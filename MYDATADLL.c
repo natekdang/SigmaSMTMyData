@@ -114,7 +114,7 @@ static int ReadMyData(
 		length = strlen( szBuffer );
 		if( length >= 2 )
 		{
-			szBuffer[ length - 2 ] = 0;
+			szBuffer[ length - 1/*2*/ ] = 0; // should it be - 1? keep losing the last char so can't find on xy 
 		}
 
 		if( ( szBuffer[ 0 ] == 'C' ) &&
